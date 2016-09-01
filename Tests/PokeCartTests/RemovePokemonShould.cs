@@ -17,17 +17,20 @@ namespace Tests
         [Test]
         public void DoNothing_IfPokemon_DoesNotExist()
         {
-            _pokeCart.RemovePokemon("Charizard");
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.RemovePokemon(pikachu);
+
             var result = _pokeCart.GetCartContents();
+
             Assert.That(result.Count, Is.EqualTo(0));
         }
 
         [Test]
         public void HaveCountOf0_WhenRemoving_OnlyExistingPokemon()
         {
-            var pokemonName = "Charizard";
-            _pokeCart.AddPokemon(pokemonName);
-            _pokeCart.RemovePokemon(pokemonName);
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.AddPokemon(pikachu);
+            _pokeCart.RemovePokemon(pikachu);
 
             var result = _pokeCart.GetCartContents();
 
@@ -37,12 +40,12 @@ namespace Tests
         [Test]
         public void SetValueOf1_WhenRemoving_PokemonWithValueOf2()
         {
-            var pokemonName = "Charizard";
-            _pokeCart.AddPokemon(pokemonName, 2);
-            _pokeCart.RemovePokemon(pokemonName);
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.AddPokemon(pikachu, 2);
+            _pokeCart.RemovePokemon(pikachu);
 
             var cartContents = _pokeCart.GetCartContents();
-            var result = cartContents[pokemonName];
+            var result = cartContents[pikachu];
 
             Assert.That(result, Is.EqualTo(1));
         }

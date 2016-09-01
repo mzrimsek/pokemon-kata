@@ -17,24 +17,32 @@ namespace Tests
         [Test]
         public void HaveCountOf1_WhenAdding_SinglePokemon()
         {
-            _pokeCart.AddPokemon("Charizard");
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.AddPokemon(pikachu);
+
             var result = _pokeCart.GetCartContents();
+
             Assert.That(result.Count, Is.EqualTo(1));
         }
 
         [Test]
         public void HaveCountOf1_WhenAdding_SamePokemonTwice()
         {
-            _pokeCart.AddPokemon("Charizard", 2);
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.AddPokemon(pikachu, 2);
+
             var result = _pokeCart.GetCartContents();
+
             Assert.That(result.Count, Is.EqualTo(1));
         }
 
         [Test]
         public void HaveCountOf2_WhenAdding_TwoDifferentPokemon()
         {
-            _pokeCart.AddPokemon("Charizard");
-            _pokeCart.AddPokemon("Blastoise");
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            var charmander = PokeCartItemGetter.GetCharmander();
+            _pokeCart.AddPokemon(pikachu);
+            _pokeCart.AddPokemon(charmander);
 
             var result = _pokeCart.GetCartContents();
 
@@ -44,11 +52,11 @@ namespace Tests
         [Test]
         public void SetValueOf1_WhenAdding_NewPokemon()
         {
-            var pokemonName = "Charizard";
-            _pokeCart.AddPokemon(pokemonName);
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.AddPokemon(pikachu);
 
             var cartContents = _pokeCart.GetCartContents();
-            var result = cartContents[pokemonName];
+            var result = cartContents[pikachu];
             
             Assert.That(result, Is.EqualTo(1));
         }
@@ -56,11 +64,11 @@ namespace Tests
         [Test]
         public void SetValueOf2_WhenAdding_ExistingPokemon()
         {
-            var pokemonName = "Charizard";
-            _pokeCart.AddPokemon(pokemonName, 2);
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            _pokeCart.AddPokemon(pikachu, 2);
 
             var cartContents = _pokeCart.GetCartContents();
-            var result = cartContents[pokemonName];
+            var result = cartContents[pikachu];
             
             Assert.That(result, Is.EqualTo(2));
         }
