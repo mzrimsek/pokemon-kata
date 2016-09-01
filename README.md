@@ -8,18 +8,21 @@ added to a discount group.
 
 | Number of Different Pokemon Purchased | Discount Amount |
 | ------------------------------------- | --------------- |
-| 2                                     | 5%              |
-| 3                                     | 10%             |
-| 4                                     | 15%             |
-| 5                                     | 25%             |
-| 6                                     | 30%             |
-| 7                                     | 35%             |
+| 1                                     | No discount     |
+| 2                                     | 10%             |
+| 3                                     | 20%             |
+
+| Pokemon for Sale | Price |
+| ---------------- | ----- |
+| Pikachu          | $6    |
+| Squirtle         | $5    |
+| Charmander       | $5    |
+
 
 ## Requirements
 
 The completed program should be able to calculate the best possible discount for any collection
-of Pokemon. Be aware that in cases such as example eight, larger percentages may not always
-be better.
+of Pokemon.
 
 Each example should be translated into a Unit Test. No UI component is required, each test
 scenario may be hard coded. Additional Unit Tests are encouraged.
@@ -36,51 +39,41 @@ product.
 ### Example One
 
 Purchased 1 Pikachu  
-**Should yield $8.00**  
+**Should yield $6.00**  
 
 ### Example Two
 
 Purchased 2 Pikachu  
-**Should yield $16.00**  
+**Should yield $12.00**  
 
 ### Example Three
 
 Purchased 1 Pikachu  
 Purchased 1 Squirtle  
-**Should yield $15.20**  
+**Should yield $9.90**  
 
-### Example Four *note that the 5% discount does not apply to the second Pikachu.
+### Example Four *note that the 10% discount does not apply to the second Pikachu.
 
 Purchased 2 Pikachu  
 Purchased 1 Squirtle  
-**Should yield $23.20**  
+**Should yield $15.90**  
 
-### Example Five *note that each group of two Pokemon receives a 5% discount.
+### Example Five *note that each group of two Pokemon receives a 10% discount.
 
 Purchased 2 Pikachu  
 Purchased 2 Squirtle  
-**Should yield $30.40**  
+**Should yield $19.80**  
 
 ### Example Six
 
 Purchased 1 Pikachu  
 Purchased 1 Squirtle  
 Purchased 1 Charmander  
-**Should yield $21.60**  
+**Should yield $12.80**  
 
 ### Example Seven *note that the 10% discount applies to the three grouped Pokemon, but not the additional ungrouped Pikachu.
 
 Purchased 2 Pikachu  
 Purchased 1 Squirtle  
 Purchased 1 Charmander  
-**Should yield $29.60**  
-
-### Example Eight *note that using the largest percentages does not yield the lowest price.
-
-Purchased 1 Snorlax  
-Purchased 2 Zapdos  
-Purchased 2 Scyther  
-Purchased 2 Charmander  
-Purchased 2 Squirtle  
-Purchased 1 Pikachu  
-**Should Yield $60.80**
+**Should yield $18.80**  
