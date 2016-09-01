@@ -34,5 +34,12 @@ namespace Tests
             var result = _pokeCart.GetDiscount(3);
             Assert.That(result, Is.EqualTo(0.20).Within(0.001));
         }
+
+        [Test]
+        public void Be20_WhenGiven_GroupOfSize10()
+        {
+            var result = _pokeCart.GetDiscount(10);
+            Assert.That(result, Is.EqualTo(0.20).Within(0.001));
+        }
     }
 }
