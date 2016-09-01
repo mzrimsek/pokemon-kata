@@ -1,4 +1,4 @@
-namespace Lib
+namespace Lib.PokeCart
 {
     public class PokeCartItem
     {

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Lib
+namespace Lib.PokeCart
 {
     public class PokeCart
     {
@@ -11,7 +11,7 @@ namespace Lib
 
         private readonly Dictionary<PokeCartItem, int> _cartContents;
 
-        public PokeCart ()
+        public PokeCart()
         {
             _cartContents = new Dictionary<PokeCartItem, int>();
         }

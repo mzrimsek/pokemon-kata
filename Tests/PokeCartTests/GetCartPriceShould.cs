@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Lib;
+using Lib.PokeCart;
 
 namespace Tests
 {
