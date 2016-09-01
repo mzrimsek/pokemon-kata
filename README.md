@@ -76,4 +76,4 @@ Purchased 1 Charmander
 Purchased 2 Pikachu  
 Purchased 1 Squirtle  
 Purchased 1 Charmander  
-**Should yield $18.80**  
+**Should yield $18.80**  # pokemon-kata
