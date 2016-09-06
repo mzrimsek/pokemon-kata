@@ -64,14 +64,20 @@ Purchased 2 Pikachu
 Purchased 2 Squirtle  
 **Should yield $19.80**  
 
-### Example Six
+### Example Six *note that each group of two Pokemon receives a 10% discount.
+
+Purchased 3 Pikachu  
+Purchased 3 Squirtle  
+**Should yield $29.70**  
+
+### Example Seven
 
 Purchased 1 Pikachu  
 Purchased 1 Squirtle  
 Purchased 1 Charmander  
 **Should yield $12.80**  
 
-### Example Seven *note that the 10% discount applies to the three grouped Pokemon, but not the additional ungrouped Pikachu.
+### Example Eight *note that the 10% discount applies to the three grouped Pokemon, but not the additional ungrouped Pikachu.
 
 Purchased 2 Pikachu  
 Purchased 1 Squirtle  

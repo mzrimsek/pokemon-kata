@@ -76,6 +76,19 @@ namespace Tests
         }
 
         [Test]
+        public void Be2970_WhenGiven_ThreePikachus_AndThreeSquirtles()
+        {
+            var pikachu = PokeCartItemGetter.GetPikachu();
+            var squirtle = PokeCartItemGetter.GetSquirtle();
+            _pokeCart.AddPokemon(pikachu, 3);
+            _pokeCart.AddPokemon(squirtle, 3);
+
+            var result = _pokeCart.GetCartPrice();
+            
+            Assert.That(result, Is.EqualTo(29.70).Within(0.001));
+        }
+
+        [Test]
         public void Be1280_WhenGiven_OnePikachu_AndOneSquirtle_AndOneCharmander()
         {
             var pikachu = PokeCartItemGetter.GetPikachu();
